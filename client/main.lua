@@ -589,11 +589,12 @@ Citizen.CreateThread(function()
 		if closestDistance ~= -1 and closestDistance <= 3.0 then
 
  			if LastEntity ~= closestEntity then
- 				TriggerEvent('esx_basicneeds:isEating', function(isEating)
- 					if not isEating then
-						TriggerEvent('esx_foodtruck:hasEnteredEntityZone', closestEntity)
-					end
-				end)
+				TriggerEvent('esx_foodtruck:hasEnteredEntityZone', closestEntity)
+ 				--TriggerEvent('esx_basicneeds:isEating', function(isEating)
+ 					--if not isEating then
+						--TriggerEvent('esx_foodtruck:hasEnteredEntityZone', closestEntity)
+					--end
+				--end)
 				LastEntity = closestEntity
 			end
 
